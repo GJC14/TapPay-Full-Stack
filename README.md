@@ -8,8 +8,13 @@ Backend:
 2. Merchant ID for registered store in compay
 
 Frontend:
-1. APP ID
-2. APP KEY
+1. APP ID for inicializing your payment application
+2. APP KEY for inicializing your payment application
+
+# Setup
+1. Clone the repo or download it
+2. Run ```python app.py```or```python3 app.py``` in terminal or just run app.py
+3. Open Browser and go to 127.0.0.1:5000 or you default port
 
 # Step1 Type in infos
 input
@@ -19,9 +24,9 @@ ccv: 123
 
 # Step2 Get Prime and send to backend
 ![Alt text](<readme_folder/截圖 2024-01-10 下午11.21.01.png>)
-![Alt text](<readme_folder截圖 2024-01-10 下午11.21.40.png>)
+![Alt text](<readme_folder/截圖 2024-01-10 下午11.21.40.png>)
 
 # Step3 Use payment_tappay.py
-![Alt text](<readme_folder截圖 2024-01-10 下午11.21.56.png>)
-![Alt text](<readme_folder截圖 2024-01-10 下午11.22.39.png>)
-![Alt text](<readme_folder截圖 2024-01-10 下午11.23.46.png>)
+![Alt text](<readme_folder/截圖 2024-01-10 下午11.21.56.png>)
+![Alt text](<readme_folder/截圖 2024-01-10 下午11.22.39.png>)
+![Alt text](<readme_folder/截圖 2024-01-10 下午11.23.46.png>)
