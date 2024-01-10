@@ -18,10 +18,10 @@ date: date not due
 ccv: 123
 
 # Step2 Get Prime and send to backend
-![Alt text](<截圖 2024-01-10 下午11.21.01.png>)
-![Alt text](<截圖 2024-01-10 下午11.21.40.png>)
+![Alt text](<readme_folder/截圖 2024-01-10 下午11.21.01.png>)
+![Alt text](<readme_folder截圖 2024-01-10 下午11.21.40.png>)
 
 # Step3 Use payment_tappay.py
-![Alt text](<截圖 2024-01-10 下午11.21.56.png>)
-![Alt text](<截圖 2024-01-10 下午11.22.39.png>)
-![Alt text](<截圖 2024-01-10 下午11.23.46.png>)
+![Alt text](<readme_folder截圖 2024-01-10 下午11.21.56.png>)
+![Alt text](<readme_folder截圖 2024-01-10 下午11.22.39.png>)
+![Alt text](<readme_folder截圖 2024-01-10 下午11.23.46.png>)
