@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to TapPay demo with backend by GJC using BootStrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- TapPay -->
+    <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.17.0"></script>
+    <style>
+        body {
+            margin: 20px 0;
+        }
+        .jumbotron {
+            text-align: center;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .container {
+            max-width: 750px;
+        }
+        form {
+            padding: 40px;
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        .tappay-field-focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+        .has-error .tappay-field-focus {
+            border-color: #843534;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+        }
+        .has-success .tappay-field-focus {
+            border-color: #2b542c;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" style="padding-bottom: 30px;">
+        <div class="form">
+            <h1>Welcome to TapPay demo with backend</h1>
+            <h3>–– by GJC using BootStrap3</h3>
+            <h1>Paying Amount $ <span class="amount" id="amount"></span></h1>
+            <a href="https://github.com/TapPay/tappay-web-example">>> TapPay web example on Github</a>
+            <p>p.s. 以下複製自 TapPay Github，作者僅加上後端的 API</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>TapPay Fields Bootstrap Example</h1>
+            <p class="lead">TapPay Fields 是 三個 host 在 TapPay 的網頁，利用 iframe 的方式嵌入商家網頁，提供安全的卡號輸入方式</p>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group card-number-group">
+                <label for="card-number" class="control-label"><span id="cardtype"></span>卡號</label>
+                <div class="form-control card-number"></div>
+            </div>
+            <div class="form-group expiration-date-group">
+                <label for="expiration-date" class="control-label">卡片到期日</label>
+                <div class="form-control expiration-date" id="tappay-expiration-date"></div>
+            </div>
+            <div class="form-group ccv-group">
+                <label for="ccv" class="control-label">卡片後三碼</label>
+                <div class="form-control ccv"></div>
+            </div>
+
+            <button type="submit" class="btn btn-default">Pay</button>
+        </form>
+        <br>
+        <pre class="jumbotron text-left" id="curl">
+        </pre>
+    </div>
+
+    <script>
+    const amount={{amount}};
+    document.getElementById('amount').textContent = amount;
+    alert('Amount: ' + amount)
+    </script>
+    
+    <script src="{{ url_for('static', filename='js/tappay_credit_card.js') }}"></script>
+</body>
+</html>
